@@ -1,4 +1,4 @@
-import  { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 type ThemeName = 'blue' | 'emerald' | 'violet';
 
@@ -16,33 +16,32 @@ const About = () => {
   const [activeStat, setActiveStat] = useState(0);
   const [currentTheme, setCurrentTheme] = useState<ThemeName>('blue');
   const sectionRef = useRef(null);
-
-  const themes: Record<ThemeName, ThemeConfig> = {
-    blue: {
-      primary: 'bg-blue-600',
-      gradient: 'from-blue-500 to-indigo-600',
-      light: 'bg-blue-100',
-      text: 'text-blue-600',
-      border: 'border-blue-600',
-      hover: 'hover:bg-blue-600'
-    },
-    emerald: {
-      primary: 'bg-emerald-600',
-      gradient: 'from-emerald-500 to-teal-600',
-      light: 'bg-emerald-100',
-      text: 'text-emerald-600',
-      border: 'border-emerald-600',
-      hover: 'hover:bg-emerald-600'
-    },
-    violet: {
-      primary: 'bg-violet-600',
-      gradient: 'from-violet-500 to-purple-600',
-      light: 'bg-violet-100',
-      text: 'text-violet-600',
-      border: 'border-violet-600',
-      hover: 'hover:bg-violet-600'
-    }
-  };
+const themes: Record<ThemeName, ThemeConfig> = {
+  blue: {
+    primary: 'bg-blue-600',
+    gradient: 'from-blue-500 to-indigo-600',
+    light: 'bg-blue-100',
+    text: 'text-blue-600',
+    border: 'border-blue-600',
+    hover: 'hover:bg-blue-600',
+  },
+  emerald: {
+    primary: 'bg-emerald-600',
+    gradient: 'from-emerald-500 to-teal-600',
+    light: 'bg-emerald-100',
+    text: 'text-emerald-600',
+    border: 'border-emerald-600',
+    hover: 'hover:bg-emerald-600',
+  },
+  violet: {
+    primary: 'bg-violet-600',
+    gradient: 'from-violet-500 to-purple-600',
+    light: 'bg-violet-100',
+    text: 'text-violet-600',
+    border: 'border-violet-600',
+    hover: 'hover:bg-violet-600',
+  },
+};
 
   const currentThemeConfig = themes[currentTheme];
 
